@@ -70,7 +70,6 @@ body {
 .heading-secondary {
   font-size: 3.5rem;
   text-transform: uppercase;
-  display: inline-block;
   font-weight: 700;
   background-image: linear-gradient(to right, #7ed56f, #28b485);
   color: transparent;
@@ -161,9 +160,63 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0px); }
 
-.composition__photo {
-  display: inline-block;
-  position: relative; }
+.composition {
+  flex-basis: 60%;
+  position: relative;
+  margin-left: 3rem; }
+  .composition__photo {
+    display: block;
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.45);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    transition: all .2s; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      transform: scale(1.05) translateY(0.5rem);
+      box-shadow: 0 2.5 4rem rgba(126, 213, 111, 0.5);
+      z-index: 5;
+      outline-offset: 2rem;
+      outline: 1.5rem solid #28b485; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95);
+    opacity: .5; }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all .2s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-5px) scale(1.05); }
+  .feature-box--1 {
+    grid-column: 1/1; }
+  .feature-box--2 {
+    grid-column: 2/2; }
+  .feature-box--3 {
+    grid-column: 3/3; }
+  .feature-box--4 {
+    grid-column: 4/4; }
 
 .header {
   height: 95vh;
@@ -187,10 +240,24 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 25rem 2rem;
   margin-top: -20vh; }
   .section-about-flex {
     padding: 0 3rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    justify-content: center;
+    flex-basis: 50%; }
+
+.about-text {
+  flex-basis: 60%; }
+
+.section-features {
+  margin-top: -7vh;
+  padding: 18rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 7rem;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 5rem, 100vw 0, 100vw 95%, 0 100%); }
