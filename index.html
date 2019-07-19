@@ -7,16 +7,45 @@
     <title>Natours | Explore the actual reality </title>
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="icon" type="image/svg" href="logo.svg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">About Natours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link">Your benefits</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link">Popular Tours</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link">Stories</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="" class="navigation__link">Book Now</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
         <div class="header__logo-box">
-            <img src="logo.svg" alt="logo" class="header__logo">
+            <img src="logo.png" alt="logo" class="header__logo">
         </div>
         <div class="header__text-box">
             <h1 class="heading-primary">
@@ -122,7 +151,7 @@
                                 <p class="card__price-only">Only</p>
                                 <p class="card__price-value">$297</p>
                             </div>
-                            <a href="#" class="btn btn--white">Book now</a>
+                            <a href="#modal" class="btn btn--white">Book now</a>
                         </div>
                     </div>
                 </div>
@@ -154,7 +183,7 @@
                                 <p class="card__price-only">Only</p>
                                 <p class="card__price-value">$497</p>
                             </div>
-                            <a href="#" class="btn btn--white">Book now</a>
+                            <a href="#modal" class="btn btn--white">Book now</a>
                         </div>
                     </div>
                 </div>
@@ -186,7 +215,7 @@
                                 <p class="card__price-only">Only</p>
                                 <p class="card__price-value">$897</p>
                             </div>
-                            <a href="#" class="btn btn--white">Book now</a>
+                            <a href="#modal" class="btn btn--white">Book now</a>
                         </div>
                     </div>
                 </div>
@@ -243,7 +272,7 @@
 
         <!-- stories section ends here -->
 
-        <section class="section-booking">
+        <section class="section-booking" id="book">
             <div class="book">
                 <div class="book__form">
                     <h3 class="heading-secondary u-margin-bottom-md-1 u-center-text">
@@ -287,7 +316,51 @@
             </div>
 
         </section>
+
     </main>
+    <footer class="section-footer">
+        <div class="footer__logo-box">
+            <img src="logo.png" alt="logo" class="footer__logo-box__img">
+        </div>
+        <div class="footer__text-box">
+            <ul class="footer__text-box--left">
+                <li class="footer__item">Company</li>
+                <li class="footer__item">Contact Us</li>
+                <li class="footer__item">Careers</li>
+                <li class="footer__item">Privacy Policy</li>
+                <li class="footer__item">Terms</li>
+            </ul>
+            <span class="footer__text-box--right">
+                Copyright &copy;2019 <span class="footer__item">Natours</span>
+            </span>
+        </div>
+    </footer>
+
+    <!-- the popup modal section -->
+    <div class="popup" id="modal">
+        <div class="popup__container">
+            <span class="popup__cross">
+               <a href="#tours">&#10006;</a>
+            </span>
+            <div class="popup__image-box">
+                <img src="./img/nat-8.jpg" alt="tour pic">
+                <img src="./img/nat-9.jpg" alt="tour pic">
+            </div>
+            <div class="popup__text-box">
+                <h2 class="heading-secondary u-margin-bottom-md-1">
+                    Start booking now
+                </h2>
+                <h3 class="heading-tertiary u-margin-bottom-md-1">
+                    Please read the terms and agreement before booking
+                </h3>
+                <p class="paragraph">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias, cumque magni. Minus dolor nisi quod, voluptatem obcaecati accusamus, similique exercitationem placeat modi, laborum aliquam commodi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor quam enim corporis.
+                </p>
+                <a href="#book" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
